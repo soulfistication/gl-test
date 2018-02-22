@@ -23,7 +23,7 @@ struct NumberDataStore {
         var fromNumber = Constants.startNumber
         fromNumber += UInt32(1) // arc4random_uniform(upper) goes to upper-1, check: man arc4random_uniform
         let toNumber = Constants.endNumber
-        let randomNumberStart = arc4random_uniform(fromNumber)
+        let randomNumberStart = 1 + arc4random_uniform(fromNumber)
         let randomNumberEnd = arc4random_uniform(fromNumber) + toNumber
         var result = [Int]()
         for i in randomNumberStart...randomNumberEnd {
